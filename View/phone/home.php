@@ -22,6 +22,13 @@ if (!isset($_SESSION['login'])) //chua dang nhap
       <a class="btn btn-success" href="phone_new.php">Thêm điện thoại</a>
     </div>
     <hr class="my-4">
+    <nav class="navbar navbar-light bg-light">
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Nhập tên sản phẩm" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
+      </form>
+    </nav>
+    <hr class="my-4">
     <table class="table caption-top">
       <thead>
         <tr>
@@ -70,7 +77,7 @@ if (!isset($_SESSION['login'])) //chua dang nhap
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                      <a class="btn btn-danger" href="phone_delete.php?id=<?php echo $item['phone_id']; ?>" role="button" >Xoá</a>
+                      <a class="btn btn-danger" href="phone_delete.php?id=<?php echo $item['phone_id']; ?>" role="button">Xoá</a>
                     </div>
                   </div>
                 </div>

@@ -18,6 +18,7 @@ if (!isset($_SESSION['login'])) //chua dang nhap
 <body>
     <div class="container">
         Chào bạn
+        <hr class="my-4">
         <div class="container text-center">
             <div class="row">
                 <div class="col">
@@ -60,7 +61,7 @@ if (!isset($_SESSION['login'])) //chua dang nhap
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
