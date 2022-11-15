@@ -137,6 +137,7 @@ lay ngau nhei n cuoc sach
         echo '<pre>';
         print_r($_POST);
         print_r($_FILES);
+
         $phone_id = isset($_POST['phone_id']) ? $_POST['phone_id'] : '';
         $phone_name = isset($_POST['phone_name']) ? $_POST['phone_name'] : '';
         $description = isset($_POST['description']) ? $_POST['description'] : '';
@@ -153,13 +154,15 @@ lay ngau nhei n cuoc sach
         $bestseller = isset($_POST['bestseller']) ? $_POST['bestseller'] : '';
         $newphone = isset($_POST['newphone']) ? $_POST['newphone'] : '';
         $availability = isset($_POST['availability']) ? $_POST['availability'] : '';
+        
         if ($_FILES['img']['error'] > 0) {
             $sql = "update phone set phone_name=?, description=?, monitor=?, camera=?, chip=?, ram=?,
             rom=?, battery=?, brand_id=?, os_id=?, price=?, promotional_price=?, bestseller=?, newphone=?, availability=?
             where phone_id=? ";
             $arrParam = [
-                $phone_name, $description, $monitor, $camera,  $chip, $ram, $rom,
-                $battery, $brand_id, $os_id, $price, $promotional_price, $bestseller, $newphone,$availability, $phone_id
+                $phone_name, $description, $monitor, $camera,  $chip, $ram,
+                $rom, $battery, $brand_id, $os_id, $price, $promotional_price, $bestseller, $newphone, $availability,
+                $phone_id
             ];
         } else {
             $sql = "update phone set phone_name=?, description=?, monitor=?, camera=?, chip=?, ram=?,
@@ -168,7 +171,7 @@ lay ngau nhei n cuoc sach
             $img = rand() . '-' . $_FILES['img']['name'];
             $arrParam = [
                 $phone_name, $description, $monitor, $camera,  $chip, $ram, $rom,
-                $battery, $img, $brand_id, $os_id, $price, $promotional_price, $bestseller, $newphone,$availability, $phone_id
+                $battery, $img, $brand_id, $os_id, $price, $promotional_price, $bestseller, $newphone, $availability, $phone_id
             ];
             move_uploaded_file($_FILES['img']['tmp_name'], IMG_PRODUCT . '/' . $img);
         }

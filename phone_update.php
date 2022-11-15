@@ -8,4 +8,4 @@ spl_autoload_register('loadClass');
 
 $phone = new Phone();
 $phone->update();
-header('location:phone_edit.php');
+// header('location:index.php');

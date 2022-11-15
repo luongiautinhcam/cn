@@ -103,7 +103,8 @@ if (!isset($_SESSION['login'])) //chua dang nhap
                             </div>
                             <span class="text-muted">$12</span> -->
                             <div>
-                                <img src="./images/phone/<?php echo $detail['img'] ?>" width="360">
+                                <img src="<?php echo IMG_PRODUCT . '/' . $detail['img'] ?>" width="360">
+                                <!-- <img src="./images/phone/<?php echo $detail['img'] ?>" width="360"> -->
                             </div>
                         </li>
                         <!-- <li class="list-group-item d-flex justify-content-between lh-sm">
@@ -135,15 +136,15 @@ if (!isset($_SESSION['login'])) //chua dang nhap
 
                     <form class="card p-2">
                         <div class="input-group">
-                            <!-- <input type="text" class="form-control" placeholder="Promo code">
-                            <button type="submit" class="btn btn-secondary">Redeem</button> -->
-                            <input type="file" class="form-control" name="img">
+                            <!-- <input type="text" class="form-control" placeholder="Promo code">-->
+                            <!-- <button type="submit" class="btn btn-secondary">Redeem</button>  -->
+                            <!-- <input type="file" class="form-control" name="img" > -->
                         </div>
                     </form>
                 </div>
                 <div class="col-md-7 col-lg-8">
                     <h4 class="mb-3">Thêm điện thoại</h4>
-                    <form class="needs-validation" action="phone_update.php" method='post' enctype="multipart/form-data" novalidate>
+                    <form action="phone_update.php" method='post' enctype="multipart/form-data" class="needs-validation">
                         <div class="row g-3">
                             <div class="col-sm-6">
                                 <label class="form-label">Mã điện thoại</label>
@@ -246,12 +247,12 @@ if (!isset($_SESSION['login'])) //chua dang nhap
                             <h4 class="mb-2">Nổi bật</h4>
                         </label>
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" name="bestseller" <?php if ($detail['bestseller'] == 1) echo ' checked '; ?>>
+                            <input type="checkbox" class="form-check-input" name="bestseller" value="1" <?php if ($detail['bestseller'] == 1) echo ' checked '; else ''; ?>>
                             <label class="form-check-label">Điện thoại BÁN CHẠY</label>
                         </div>
 
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" name="newphone" <?php if ($detail['newphone'] == 1) echo ' checked '; ?>>
+                            <input type="checkbox" class="form-check-input" name="newphone" value="1" <?php if ($detail['newphone'] == 1) echo ' checked '; else ''; ?>>
                             <label class="form-check-label">Điện thoại MỚI</label>
                         </div>
 
@@ -262,11 +263,11 @@ if (!isset($_SESSION['login'])) //chua dang nhap
                                 <h4 class="mb-2">Tình trạng</h4>
                             </label>
                             <div class="form-check">
-                                <input type="radio" class="form-check-input" name="availability" <?php if ($detail['availability'] == 1) echo ' checked '; ?>>
+                                <input type="radio" class="form-check-input" name="availability" value=1 <?php if ($detail['availability'] == 1) echo ' checked '; ?>>
                                 <label class="form-check-label" for="credit">Còn hàng</label>
                             </div>
                             <div class="form-check">
-                                <input type="radio" class="form-check-input" name="availability" <?php if ($detail['availability'] == 0) echo ' checked '; ?>>
+                                <input type="radio" class="form-check-input" name="availability" value=0 <?php if ($detail['availability'] == 0) echo ' checked '; ?>>
                                 <label class="form-check-label" for="debit">Hết hàng</label>
                             </div>
                         </div>
