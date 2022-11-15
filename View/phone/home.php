@@ -54,15 +54,15 @@ if (!isset($_SESSION['login'])) //chua dang nhap
             <td>
               <a class="btn btn-primary" href="phone_edit.php?id=<?php echo $item['phone_id'] ?>" role="button">Chỉnh sửa</a>
               <!-- Button trigger modal -->
-              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Xoá 
+              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete">
+                Xoá
               </button>
               <!-- Modal -->
-              <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal" id="delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">Xác nhận xoá</h1>
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Xác nhận xoá </h1>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
