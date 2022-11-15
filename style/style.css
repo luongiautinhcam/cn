@@ -1,0 +1,16 @@
+.form-login{
+    width: 500px;
+    margin: 0 auto;
+}
+.main{
+    padding: 0 100px 0 100px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #f8f9fa;
+}
+.main .item-right{
+    float: right;
+}
+.main-center{
+    margin: 0 auto;
+}
