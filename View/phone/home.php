@@ -17,9 +17,11 @@ if (!isset($_SESSION['login'])) //chua dang nhap
 <body>
   <div class="container">
     <h1>QUẢN LÝ SẢN PHẨM</h1>
+    <hr class="my-4">
     <div>
       <a class="btn btn-success" href="phone_new.php">Thêm điện thoại</a>
     </div>
+    <hr class="my-4">
     <table class="table caption-top">
       <thead>
         <tr>
