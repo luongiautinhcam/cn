@@ -10,6 +10,22 @@ class Brand extends Db
     {
     }
 
+    function add (){
+        echo '<pre>';
+        print_r($_POST);
+
+        $brand_id = $_POST['brand_id'];
+        $brand_name = $_POST['brand_name'];
+
+        $sql ="insert into brand (brand_id, brand_name) values (?,?) ";
+        $arrParam = [$brand_id, $brand_name];
+        $n = $this->updateQuery($sql, $arrParam);
+        print_r($sql);
+        echo '<pre>';
+        print_r($arrParam);
+        echo $n;
+    }
+
     function delete($brand_id)
     {
         $sql = "delete from brand where brand_id = ?";

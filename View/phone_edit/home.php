@@ -247,12 +247,14 @@ if (!isset($_SESSION['login'])) //chua dang nhap
                             <h4 class="mb-2">Nổi bật</h4>
                         </label>
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" name="bestseller" value="1" <?php if ($detail['bestseller'] == 1) echo ' checked '; else ''; ?>>
+                            <input type="checkbox" class="form-check-input" name="bestseller" value="1" <?php if ($detail['bestseller'] == 1) echo ' checked ';
+                                                                                                        else ''; ?>>
                             <label class="form-check-label">Điện thoại BÁN CHẠY</label>
                         </div>
 
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" name="newphone" value="1" <?php if ($detail['newphone'] == 1) echo ' checked '; else ''; ?>>
+                            <input type="checkbox" class="form-check-input" name="newphone" value="1" <?php if ($detail['newphone'] == 1) echo ' checked ';
+                                                                                                        else ''; ?>>
                             <label class="form-check-label">Điện thoại MỚI</label>
                         </div>
 
@@ -274,7 +276,29 @@ if (!isset($_SESSION['login'])) //chua dang nhap
 
                         <hr class="my-4">
                         <input class="btn btn-success" type="submit" value="Xác nhận">
-                        <a class="btn btn-danger" href="phone_delete.php" role="button">Xoá</a>
+                        <!-- <a class="btn btn-danger" href="phone_delete.php" role="button">Xoá</a> -->
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete">
+                            Xoá
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal" id="delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Xác nhận xoá </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Bạn có muốn xoá sản phẩm <b><?php echo $detail['phone_name']; ?></b>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                                        <a class="btn btn-danger" href="phone_delete.php?id=<?php echo $detail['phone_id']; ?>" role="button">Xoá</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
