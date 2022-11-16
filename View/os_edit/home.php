@@ -12,7 +12,7 @@ if (!isset($_SESSION['login'])) //chua dang nhap
 
 <head>
     <?php include "./subpages/header.php"; ?>
-    <title>Chỉnh sửa <?php echo $brand['brand_name'] ?></title>
+    <title>Chỉnh sửa <?php echo $os['os_name'] ?></title>
 </head>
 
 <body>
@@ -91,17 +91,17 @@ if (!isset($_SESSION['login'])) //chua dang nhap
         <main>
             <div class="row g-5">
                 <div class="col-md-7 col-lg-8">
-                    <h4 class="mb-3">Chỉnh sửa <?php echo $brand['brand_name'] ?></h4>
-                    <form action="brand_update.php" method='post' enctype="multipart/form-data" class="needs-validation">
+                    <h4 class="mb-3">Chỉnh sửa <?php echo $os['os_name'] ?></h4>
+                    <form action="os_update.php" method='post' enctype="multipart/form-data" class="needs-validation">
                         <div class="row g-3">
                             <div class="col-sm-6">
-                                <label class="form-label">Mã hãng sản xuất</label>
-                                <input type="text" class="form-control" name="brand_id" value="<?php echo $brand['brand_id'] ?>" readonly>
+                                <label class="form-label">Mã hệ điều hành</label>
+                                <input type="text" class="form-control" name="os_id" value="<?php echo $os['os_id'] ?>" readonly>
                             </div>
 
                             <div class="col-sm-6">
-                                <label class="form-label">Tên hãng sản xuất</label>
-                                <input type="text" class="form-control" name="brand_name" value="<?php echo $brand['brand_name'] ?>">
+                                <label class="form-label">Tên hệ điều hành</label>
+                                <input type="text" class="form-control" name="os_name" value="<?php echo $os['os_name'] ?>">
                             </div>
 
                         </div>
@@ -122,7 +122,7 @@ if (!isset($_SESSION['login'])) //chua dang nhap
                             </thead>
                             <tbody>
                                 <?php
-                                foreach ($phoneinbrand as $item) {
+                                foreach ($phoneinos as $item) {
                                 ?>
                                     <tr>
                                         <th scope="row"><?php echo $item['phone_id']; ?></th>
@@ -162,11 +162,11 @@ if (!isset($_SESSION['login'])) //chua dang nhap
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        Bạn có muốn xoá hãng sản xuất <b><?php echo $brand['brand_name']; ?></b>
+                                        Bạn có muốn xoá hãng sản xuất <b><?php echo $os['os_name']; ?></b>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                                        <a class="btn btn-danger" href="brand_delete.php?id=<?php echo $brand['brand_id']; ?>" role="button" onclick="del()">Xoá</a>
+                                        <a class="btn btn-danger" href="os_delete.php?id=<?php echo $os['os_id']; ?>" role="button" onclick="del()">Xoá</a>
                                         <!-- <script>
                                             function del() {
                                                 alert("Xoá thành công!");

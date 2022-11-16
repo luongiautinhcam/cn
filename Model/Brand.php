@@ -52,7 +52,7 @@ class Brand extends Db
             return $data[0];
         return []; //mang rong
     }
-    //tra ve 1 category co cat_id = $id
+    
     function update()
     {
         $brand_id = isset($_POST['brand_id']) ? $_POST['brand_id'] : '';
