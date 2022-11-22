@@ -49,8 +49,18 @@ if (!isset($_SESSION['login'])) //chua dang nhap
             <th scope="row"><?php echo $item['phone_id']; ?></th>
             <td><?php echo $item['phone_name']; ?></td>
             <td><?php echo number_format($item['price']) ?></td>
-            <td><?php echo $item['brand_id']; ?></td>
-            <td><?php echo $item['os_id']; ?></td>
+            <td><?php 
+                foreach ($Brand as $itembrand) {
+                  if ($item['brand_id'] == $itembrand['brand_id']) {
+                      echo $itembrand['brand_name'];
+                  }
+                } ?></td>
+            <td><?php 
+                foreach ($Os as $itemos) {
+                  if ($item['os_id'] == $itemos['os_id']) {
+                    echo $itemos['os_name'];
+                  }
+                } ?></td>
             <td><?php
                 if ($item['availability'] == 1) {
                   echo '<p class="text-success">Còn hàng</p>';

@@ -9,6 +9,8 @@ spl_autoload_register('loadClass');
 $myphone = new Phone();
 $Phone = $myphone->all();
 $mybrand = new Brand();
+$myos = new Os();
+$Os = $myos->all();
 $Brand = $mybrand->all();
 $brand_id = isset($_GET['brand_id'])?$_GET['brand_id']:'';
 
