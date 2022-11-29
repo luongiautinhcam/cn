@@ -4,4 +4,4 @@ define('DB', 'phonestore');
 define('USER','root');
 define('PW', '');
 
-define('IMG_PRODUCT', 'images/phone');
+define('IMG_PRODUCT', 'img/phone');
