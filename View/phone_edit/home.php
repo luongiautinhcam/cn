@@ -97,41 +97,29 @@ if (!isset($_SESSION['login'])) //chua dang nhap
                     </h4>
                     <ul class="list-group mb-3">
                         <li class="list-group-item d-flex justify-content-between lh-sm">
-                            <!-- <div>
-                                <h6 class="my-0">Product name</h6>
-                                <small class="text-muted">Brief description</small>
-                            </div>
-                            <span class="text-muted">$12</span> -->
                             <div>
-                                <img src="<?php echo IMG_PRODUCT . '/' . $detail['img'] ?>" width="360">
+                                <img src="<?php echo IMG_PHONE ?>/<?php echo $detail['img'] ?>" width="360">
                                 <!-- <img src="./images/phone/<?php echo $detail['img'] ?>" width="360"> -->
                             </div>
                         </li>
-                        <!-- <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
                             <div>
-                                <h6 class="my-0">Second product</h6>
-                                <small class="text-muted">Brief description</small>
+                                <img src="<?php echo IMG_PHONE ?>/<?php echo $detail['img1'] ?>" width="360">
+                                <!-- <img src="./images/phone/<?php echo $detail['img'] ?>" width="360"> -->
                             </div>
-                            <span class="text-muted">$8</span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between lh-sm">
                             <div>
-                                <h6 class="my-0">Third item</h6>
-                                <small class="text-muted">Brief description</small>
+                                <img src="<?php echo IMG_PHONE ?>/<?php echo $detail['img2'] ?>" width="360">
+                                <!-- <img src="./images/phone/<?php echo $detail['img'] ?>" width="360"> -->
                             </div>
-                            <span class="text-muted">$5</span>
                         </li>
-                        <li class="list-group-item d-flex justify-content-between bg-light">
-                            <div class="text-success">
-                                <h6 class="my-0">Promo code</h6>
-                                <small>EXAMPLECODE</small>
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <img src="<?php echo IMG_PHONE ?>/<?php echo $detail['img3'] ?>" width="360">
+                                <!-- <img src="./images/phone/<?php echo $detail['img'] ?>" width="360"> -->
                             </div>
-                            <span class="text-success">−$5</span>
                         </li>
-                        <li class="list-group-item d-flex justify-content-between">
-                            <span>Total (USD)</span>
-                            <strong>$20</strong>
-                        </li> -->
                     </ul>
 
                     <form class="card p-2">
@@ -194,6 +182,21 @@ if (!isset($_SESSION['login'])) //chua dang nhap
                             <div class="col-12">
                                 <label class="form-label">Hình</label>
                                 <input type="file" class="form-control" name="img">
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label">Hình 1</label>
+                                <input type="file" class="form-control" name="img1">
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label">Hình 2</label>
+                                <input type="file" class="form-control" name="img2">
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label">Hình 3</label>
+                                <input type="file" class="form-control" name="img3">
                             </div>
 
                             <div class="col-md-5">
