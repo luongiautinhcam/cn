@@ -110,10 +110,16 @@ lay ngau nhei n cuoc sach
         $arrParam = [$phone_id];
         $detail = $this->detail($phone_id);
         $img = $detail['img']; //lay ten hinh cua sach ra
+        $img1 = $detail['img1']; //lay ten hinh cua sach ra
+        $img2 = $detail['img2']; //lay ten hinh cua sach ra
+        $img3 = $detail['img3']; //lay ten hinh cua sach ra
         $n = $this->updateQuery($sql, $arrParam);
         if ($n > 0) //xoa ok
         {
-            unlink(IMG_PHONE . '/' . $img); //xoa (kiem tra file hinh co kg)
+            unlink(IMG_PHONE . '/' . $img);
+            unlink(IMG_PHONE . '/' . $img1);
+            unlink(IMG_PHONE . '/' . $img2);
+            unlink(IMG_PHONE . '/' . $img3); //xoa (kiem tra file hinh co kg)
             //if_file(IMG_PRODUCT .'/'. $img)
         }
         return $n;
