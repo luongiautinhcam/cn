@@ -250,13 +250,13 @@ if (!isset($_SESSION['login'])) //chua dang nhap
                             <h4 class="mb-2">Nổi bật</h4>
                         </label>
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" name="bestseller" value="1" <?php if ($detail['bestseller'] == 1) echo ' checked ';
+                            <input type="checkbox" class="form-check-input" name="bestseller" value="" <?php if ($detail['bestseller'] == 1) echo ' checked ';
                                                                                                         else ''; ?>>
                             <label class="form-check-label">Điện thoại BÁN CHẠY</label>
                         </div>
 
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" name="newphone" value="1" <?php if ($detail['newphone'] == 1) echo ' checked ';
+                            <input type="checkbox" class="form-check-input" name="newphone" value="" <?php if ($detail['newphone'] == 1) echo ' checked ';
                                                                                                         else ''; ?>>
                             <label class="form-check-label">Điện thoại MỚI</label>
                         </div>
