@@ -70,32 +70,6 @@ lay ngau nhei n cuoc sach
         move_uploaded_file($_FILES['img1']['tmp_name'], IMG_PHONE . '/' . $img1);
         move_uploaded_file($_FILES['img2']['tmp_name'], IMG_PHONE . '/' . $img2);
         move_uploaded_file($_FILES['img3']['tmp_name'], IMG_PHONE . '/' . $img3);
-        // if ($_FILES['img']['error'] > 0) {
-        // $sql = "insert into phone (phone_id, phone_name, description, monitor, 
-        // camera, chip, ram, color, rom, battery, img, img1, img2, img3, img4, price, promotional_price, 
-        // os_id, brand_id, bestseller, newphone) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-        // $img = rand() . '-' . $_FILES['img']['name'];
-        // $img1 = rand() . '-' . $_FILES['img']['name'];
-        // $img2 = rand() . '-' . $_FILES['img']['name'];
-        // $img3 = rand() . '-' . $_FILES['img']['name'];
-        // $img4 = rand() . '-' . $_FILES['img']['name'];
-        // $arrParam = [
-        //     $phone_id, $phone_name, $description, $monitor, $camera, $chip, $ram, $color, $rom,
-        //     $battery, $img, $img1, $img2, $img3, $img4, $price, $promotional_price, $os_id, $brand_id, 
-        //     $bestseller, $newphone
-        // ];
-        // move_uploaded_file($_FILES['img']['tmp_name'], IMG_PRODUCT . '/' . $img);
-        // } else {
-        //     $sql = "insert into phone (phone_id, phone_name, description, monitor, 
-        //     camera, chip, ram, color, rom, battery, img, img1, img2, img3, img4, price, promotional_price, 
-        //     os_id, brand_id, bestseller, newphone) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-        //     $img = rand() . '-' . $_FILES['img']['name'];
-        //     $arrParam = [
-        //         $phone_id, $phone_name, $description, $monitor, $camera,  $chip, $ram, $rom,
-        //         $battery, $img, $brand_id, $os_id, $price, $promotional_price
-        //     ];
-        //     move_uploaded_file($_FILES['img']['tmp_name'], IMG_PRODUCT . '/' . $img);
-        // }
 
         $n = $this->updateQuery($sql, $arrParam);
         print_r($sql);

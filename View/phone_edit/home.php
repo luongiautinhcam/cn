@@ -131,7 +131,7 @@ if (!isset($_SESSION['login'])) //chua dang nhap
                     </form>
                 </div>
                 <div class="col-md-7 col-lg-8">
-                    <h4 class="mb-3">Thêm điện thoại</h4>
+                    <h4 class="mb-3">Chỉnh sửa điện thoại</h4>
                     <form action="phone_update.php" method='post' enctype="multipart/form-data" class="needs-validation">
                         <div class="row g-3">
                             <div class="col-sm-6">
@@ -181,22 +181,22 @@ if (!isset($_SESSION['login'])) //chua dang nhap
 
                             <div class="col-12">
                                 <label class="form-label">Hình</label>
-                                <input type="file" class="form-control" name="img">
+                                <input type="file" class="form-control" name="img" >
                             </div>
 
                             <div class="col-12">
                                 <label class="form-label">Hình 1</label>
-                                <input type="file" class="form-control" name="img1">
+                                <input type="file" class="form-control" name="img1" >
                             </div>
 
                             <div class="col-12">
                                 <label class="form-label">Hình 2</label>
-                                <input type="file" class="form-control" name="img2">
+                                <input type="file" class="form-control" name="img2" >
                             </div>
 
                             <div class="col-12">
                                 <label class="form-label">Hình 3</label>
-                                <input type="file" class="form-control" name="img3">
+                                <input type="file" class="form-control" name="img3" >
                             </div>
 
                             <div class="col-md-5">
