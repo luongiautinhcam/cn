@@ -348,12 +348,12 @@
                             <h4 class="mb-2">Nổi bật</h4>
                         </label>
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" name="bestseller" value="1">
+                            <input type="checkbox" class="form-check-input" name="bestseller" value="1" checked>
                             <label class="form-check-label">Điện thoại BÁN CHẠY</label>
                         </div>
 
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" name="newphone" value="1">
+                            <input type="checkbox" class="form-check-input" name="newphone" value="1" checked>
                             <label class="form-check-label">Điện thoại MỚI</label>
                         </div>
 
@@ -364,7 +364,7 @@
                                 <h4 class="mb-2">Tình trạng</h4>
                             </label>
                             <div class="form-check">
-                                <input type="radio" class="form-check-input" name="availability" value="1" >
+                                <input type="radio" class="form-check-input" name="availability" value="1" checked>
                                 <label class="form-check-label" for="credit">Còn hàng</label>
                             </div>
                             <div class="form-check">

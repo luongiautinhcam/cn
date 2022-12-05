@@ -12,4 +12,4 @@ if($id !=='')
     $phone = new Phone();
     $n = $phone->delete($id);
 }
-header('location:index.php');
+header('location:phone.php');
