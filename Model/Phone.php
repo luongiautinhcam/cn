@@ -6,10 +6,7 @@ class Phone extends Db
         $sql = "select * from phone ";
         return $this->selectQuery($sql);
     }
-    /*
-lay ngau nhei n cuoc sach
 
-*/
     function random($n = 4)
     {
         $sql = "select * from phone order by rand() limit 0, $n";
@@ -47,24 +44,28 @@ lay ngau nhei n cuoc sach
         $ram = $_POST['ram'];
         $rom = $_POST['rom'];
         $battery = $_POST['battery'];
-        $brand_id = $_POST['brand_id'];
-        $os_id = $_POST['os_id'];
-        $price = $_POST['price'];
-        $promotional_price = $_POST['promotional_price'];
-        $bestseller = $_POST['bestseller'];
-        $newphone = $_POST['newphone'];
-        $availability = $_POST['availability'];
-        $sql = "insert into phone (phone_id, phone_name, description, monitor,
-         camera, chip, ram, rom, battery, img,  img1, img2, img3, price, promotional_price,
-          os_id, brand_id, bestseller, newphone, availability) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ";
         $img = rand() . '-' . $_FILES['img']['name'];
         $img1 = rand() . '-' . $_FILES['img1']['name'];
         $img2 = rand() . '-' . $_FILES['img2']['name'];
         $img3 = rand() . '-' . $_FILES['img3']['name'];
+        $price = $_POST['price'];
+        $promotional_price = $_POST['promotional_price'];
+        $os_id = $_POST['os_id'];
+        $brand_id = $_POST['brand_id'];
+        $availability = $_POST['availability'];
+        $sql = "insert into phone (phone_id, phone_name, description, monitor,
+        camera, chip, ram, rom, battery, 
+        img,  img1, img2, img3, 
+        price, promotional_price,
+        os_id, brand_id, 
+        availability) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ";
         $arrParam = [
-            $phone_id, $phone_name, $description, $monitor, $camera, $chip, $ram, $rom,
-            $battery, $img, $img1, $img2, $img3, $price, $promotional_price, $os_id, $brand_id,
-            $bestseller, $newphone, $availability
+            $phone_id, $phone_name, $description, $monitor,
+            $camera, $chip, $ram, $rom, $battery,
+            $img, $img1, $img2, $img3, 
+            $price, $promotional_price, 
+            $os_id, $brand_id,
+            $availability
         ];
         move_uploaded_file($_FILES['img']['tmp_name'], IMG_PHONE . '/' . $img);
         move_uploaded_file($_FILES['img1']['tmp_name'], IMG_PHONE . '/' . $img1);
@@ -137,30 +138,43 @@ lay ngau nhei n cuoc sach
         $os_id = isset($_POST['os_id']) ? $_POST['os_id'] : '';
         $price = isset($_POST['price']) ? $_POST['price'] : '';
         $promotional_price = isset($_POST['promotional_price']) ? $_POST['promotional_price'] : '';
-        $bestseller = isset($_POST['bestseller']) ? $_POST['bestseller'] : '';
-        $newphone = isset($_POST['newphone']) ? $_POST['newphone'] : '';
         $availability = isset($_POST['availability']) ? $_POST['availability'] : '';
 
         if ($_FILES['img']['error'] > 0) {
-            $sql = "update phone set phone_name=?, description=?, monitor=?, camera=?, chip=?, ram=?,
-            rom=?, battery=?, brand_id=?, os_id=?, price=?, promotional_price=?, bestseller=?, newphone=?, availability=?
+            $sql = "update phone set phone_name=?, description=?, monitor=?, 
+            camera=?, chip=?, ram=?, rom=?, battery=?, 
+            price=?, promotional_price=?,
+            os_id=?, brand_id=?,
+            availability=?
             where phone_id=? ";
             $arrParam = [
-                $phone_name, $description, $monitor, $camera,  $chip, $ram,
-                $rom, $battery, $brand_id, $os_id, $price, $promotional_price, $bestseller, $newphone, $availability,
+                $phone_name, $description, $monitor,
+                $camera, $chip, $ram, $rom, $battery, 
+                $price, $promotional_price, 
+                $os_id, $brand_id,
+                $availability,
                 $phone_id
             ];
         } else {
-            $sql = "update phone set phone_name=?, description=?, monitor=?, camera=?, chip=?, ram=?,
-                    rom=?, battery=?, img=?, img1=?, img2=?, img3=?, brand_id=?, os_id=?, price=?, promotional_price=?, bestseller=?, newphone=?, availability=?
-                    where phone_id=? ";
+            $sql = "update phone set phone_name=?, description=?, monitor=?,
+            camera=?, chip=?, ram=?, rom=?, battery=?,
+            img=?, img1=?, img2=?, img3=?, 
+            price=?, promotional_price=?,
+            os_id=?, brand_id=?, 
+            availability=?
+            where phone_id=? ";
             $img = rand() . '-' . $_FILES['img']['name'];
             $img1 = rand() . '-' . $_FILES['img1']['name'];
             $img2 = rand() . '-' . $_FILES['img2']['name'];
             $img3 = rand() . '-' . $_FILES['img3']['name'];
             $arrParam = [
-                $phone_name, $description, $monitor, $camera,  $chip, $ram, $rom,
-                $battery, $img, $img1, $img2, $img3, $brand_id, $os_id, $price, $promotional_price, $bestseller, $newphone, $availability, $phone_id
+                $phone_name, $description, $monitor, 
+                $camera,  $chip, $ram, $rom, $battery,
+                $img, $img1, $img2, $img3, 
+                $price, $promotional_price,
+                $os_id, $brand_id, 
+                $availability, 
+                $phone_id
             ];
             move_uploaded_file($_FILES['img']['tmp_name'], IMG_PHONE . '/' . $img);
             move_uploaded_file($_FILES['img1']['tmp_name'], IMG_PHONE . '/' . $img1);

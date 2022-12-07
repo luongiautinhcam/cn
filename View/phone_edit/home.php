@@ -181,7 +181,7 @@ if (!isset($_SESSION['login'])) //chua dang nhap
 
                             <div class="col-12">
                                 <label class="form-label">Hình</label>
-                                <input type="file" class="form-control" name="img" value="<?php echo $detail['img'] ?>" required>
+                                <input type="file" class="form-control" name="img" src="<?php echo $detail['img'] ?>">
                             </div>
 
                             <div class="col-12">
@@ -242,36 +242,6 @@ if (!isset($_SESSION['login'])) //chua dang nhap
 
                             </div>
 
-                        </div>
-
-                        <hr class="my-4">
-
-                        <label class="form-label">
-                            <h4 class="mb-2">Nổi bật</h4>
-                        </label>
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" name="bestseller" 
-                            value="<?php if ($detail['bestseller'] == 1) {
-                                echo 1;
-                            } 
-                            if ($detail['bestseller'] == 0) {
-                                echo 0;
-                            } ?>" <?php if ($detail['bestseller'] == 1) echo ' checked '; else ''; ?>>
-                            <label class="form-check-label">Điện thoại BÁN CHẠY</label>
-                        </div>
-
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" name="newphone" 
-                            value=<?php if ($detail['newphone'] == 1) {
-                                echo 1;
-                            }
-                            if ($detail['newphone'] == 0) {
-                                echo 0;
-                            }
-                            ?>
-                             <?php if ($detail['newphone'] == 1) echo ' checked ';
-                                                                                                        else ''; ?>>
-                            <label class="form-check-label">Điện thoại MỚI</label>
                         </div>
 
                         <hr class="my-4">
